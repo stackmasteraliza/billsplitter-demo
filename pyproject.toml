@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "billsplitter"
+version = "0.1.0"
+description = "Split a restaurant bill fairly, with tip and rounding."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+
+[tool.setuptools.packages.find]
+include = ["billsplitter*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
