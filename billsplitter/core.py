@@ -12,8 +12,8 @@ def per_person_with_tip(total, num_people, tip_percent):
     BUG: the tip is calculated but never added to the total, so everyone is
     undercharged. `split_bill` relies on this, so its tests fail too.
     """
-    tip = total * (tip_percent / 100.0)  # noqa: F841  (computed but unused)
-    return round(total / num_people, 2)
+    tip = total * (tip_percent / 100.0)
+    return round((total + tip) / num_people, 2)
 
 
 def split_bill(total, num_people, tip_percent=0):
